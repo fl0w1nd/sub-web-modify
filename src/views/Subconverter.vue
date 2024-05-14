@@ -35,7 +35,7 @@
                     allow-create
                     filterable
                     @change="selectChanged"
-                    placeholder="可输入自己的后端"
+                    placeholder="默认后端 |  https://suc.zcsouls.com/sub?"
                     style="width: 100%"
                 >
                   <el-option v-for="(v, k) in options.customBackend" :key="k" :label="k" :value="v"></el-option>
@@ -474,6 +474,7 @@ export default {
           "sub.cm": "https://sub.cm/short",
         },
         customBackend: {
+          "默认后端": "https://suc.zcsouls.com",
           "肥羊增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
           "肥羊备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
           "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one",
@@ -483,6 +484,7 @@ export default {
           "sub作者&lhie1提供": "https://api.dler.io",
         },
         backendOptions: [
+          {value: "https://suc.zcsouls.com"},
           {value: "https://url.v1.mk"},
           {value: "https://sub.d1.mk"},
           {value: "https://api.tsutsu.one"},
@@ -498,6 +500,10 @@ export default {
               {
                 label: "默认",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
+              },
+              {
+                label: "站长自用规则",
+                value: "https://raw.githubusercontent.com/fl0w1nd/clash/main/%E4%B8%AA%E4%BA%BA%E8%87%AA%E7%94%A8%E8%A7%84%E5%88%99/leaf.ini"
               },
               {
                 label: "默认（自动测速）",
